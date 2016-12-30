@@ -1,0 +1,404 @@
+@charset "utf-8";
+/* CSS document */
+
+/*header*/
+header {
+    position: relative;
+    height: 1.2rem;
+    background: #0053a0;
+}
+.header-title {
+    position: absolute;
+    top: 0;
+    left: 1.2rem;
+    right: 1.2rem;
+    height: 1.2rem;
+    background: url(../images/small-logo.png) no-repeat center center;
+    background-size: 1.93rem;
+}
+
+/* container */
+.title {
+    position: relative;
+    font-size: 0.48rem;
+    color: #262626;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.12rem;
+    background: #fff;
+}
+.title:before, .card-number:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    height: .053rem;
+    width: 100%;
+    background: url(../images/active-botoom.png) no-repeat;
+    -webkit-background-size: 100% .053rem;
+    background-size: 100% .053rem;
+}
+/*银行卡片*/
+.card {
+    padding: 0.3333rem 0.6667rem;
+}
+.card-item {
+    border-top: 1px solid transparent;
+    height: 4.32rem;
+    background: url("../images/card.png") no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.card-number {
+    position: relative;
+    color: #0053a1;
+    text-align: center;
+    font-size: 0.587rem;
+    width: 7.28rem;
+    line-height: 1.0667rem;
+    background: #fff;
+    margin: 2.28rem auto auto auto;
+}
+/**/
+.item {
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: -o-box;
+    display: box;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+}
+.item > div {
+    /*-webkit-box-pack: center;*/
+    /*-moz-box-pack: center;*/
+    /*-ms-box-pack: center;*/
+    /*-o-box-pack: center;*/
+    /*box-pack: center;*/
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-box-align: center;
+    -o-box-align: center;
+    box-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: -o-box;
+    display: box;
+}
+.form, .list {
+    padding: 0 0.3333rem;
+    background: #fff;
+    box-shadow: 0px 0px 5px #ccc,
+                0px 0px 0px transparent,
+                0px 0px 3px #ccc,
+                0 0 0 transparent;
+    overflow: hidden;
+}
+.form-group {
+    font-size: 0.3733rem;
+    height: 1.17334rem;
+}
+.form-group, .item {
+    border-top: 1px solid #fff;
+    border-bottom:1px solid #c9c9c9;
+    padding-left: 0.3333rem;
+}
+.autoClear {
+    border: transparent;
+}
+.label {
+    color: #4a4a4a;
+    font-weight: bold;
+    margin-right: .4rem;
+    width: 1.412rem;
+}
+.input-wrap {
+    position: relative;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+}
+.input-wrap .form-control {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: -o-box;
+    display: box;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    font-size: 0.3733rem;
+    padding: 0.24rem 0;
+    border: none;
+    -webkit-outline: none;
+    -moz-outline: none;
+    -ms-outline: none;
+    -o-outline: none;
+    outline: none;
+}
+
+.code-box {
+    margin-left: 15px;
+}
+
+.code {
+    width: 2.667rem;
+    padding: 0.154rem 0;
+    color: #fff;
+    text-align: center;
+    font-size: 0.373rem;
+    background: #004e9a;
+    -webkit-border-radius: .08rem;
+    -moz-border-radius: .08rem;
+    border-radius: .08rem;
+}
+
+/*清除按钮*/
+.icon-clear {
+    visibility: hidden;
+    width: 0.6rem;
+    height: 100%;
+}
+.clear-img {
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: url("../images/clear.png") no-repeat center center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.error-text {
+    z-index: 9;
+    color: #d32d2d;
+    font-size: 0.32rem;
+    display: none;
+    margin: 0.08rem auto 0.133rem 2.1453rem;
+}
+.error.form-group {
+    border-bottom:1px solid #d9292d;
+}
+/*.error > .icon-clear {*/
+    /*visibility: visible;*/
+/*}*/
+/*.error .clear-img {*/
+    /*display: block;*/
+    /*width: 0.5rem;*/
+    /*height: 0.5rem;*/
+    /*background: url("../images/error.png") no-repeat center center;*/
+    /*-webkit-background-size: 100%;*/
+    /*background-size: 100%;*/
+/*}*/
+
+/*还款渠道*/
+.gray-text {
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: -o-box;
+    display: box;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-box-pack: center;
+    -o-box-pack: center;
+    box-pack: center;
+    margin: 0.2667rem 0.3333rem;
+    color: #292929;
+}
+.gray-text:after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: #c9c9c9;
+    -webkit-transform: scaleY(.5);
+}
+.gray-layout {
+    background-color: #f0f0f0;
+    z-index: 10;
+    position: relative;
+    font-size: 0.37rem;
+    padding: 0 0.16rem;
+    vertical-align: baseline;
+}
+
+/*单选卡列表*/
+.item-radio {
+    position: relative;
+    color: #4a4a4a;
+    font-size: 0.3733rem;
+    height: 1.17334rem;
+}
+
+.item .ico {
+    width: 0.6133rem;
+    margin-right: 0.2134rem;
+}
+.radio-ifo {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    -webkit-box-pack: start !important;
+    -moz-box-pack: start !important;
+    -ms-box-pack: start !important;
+    box-pack: start !important;
+}
+.icon-pufa,
+.icon-zhifubao,
+.icon-weixin,
+.icon-youzheng,
+.icon-Bank_China {
+    display: inline-block;
+    width: 0.6133rem;
+    height: 0.6133rem;
+}
+.icon-channel {
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 0.16rem;
+    background: url("../images/circle.png") no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    width: 0.37rem;
+    height: 0.37rem;
+}
+.icon-pufa {
+    background: url("../images/pf_icon.png") no-repeat center center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.icon-zhifubao {
+    background: url("../images/zhifubao.png") no-repeat center center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.icon-weixin {
+    display: inline-block;
+    background: url("../images/weixin.png") no-repeat center center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.icon-youzheng {
+    background: url("../images/amy-bank-youzheng.png") no-repeat center center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.icon-Bank_China {
+    background: url("../images/china-bank.png") no-repeat center center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.flag {
+    display: inline-block;
+    color: #fff;
+    font-size: 0.2667rem;
+    background: #de2d28;
+    width: 0.7rem;
+    text-align: center;
+    height: 0.4rem;
+    line-height: 0.5rem;
+    margin-left: 0.2rem;
+    -webkit-border-radius: 0.0534rem;
+    -moz-border-radius: 0.0534rem;
+    border-radius: 0.0534rem;
+}
+.item-radio input[type=radio] {
+    display: inline-block;
+    width: 0.5067rem;
+    height: 0.5067rem;
+    border: 0;
+    outline: 0!important;
+    background-color: transparent;
+    -webkit-appearance: none;
+}
+.item-radio input[type=radio]:before {
+    display: inline-block;
+    content: "";
+    line-height: 1;
+    width: 0.5067rem;
+    height: 0.5067rem;
+    text-decoration: none;
+    color: #aaa;
+    border-radius: 0;
+    -webkit-font-smoothing: antialiased;
+    background: url("../images/radio_normal.png") no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.item-radio input[type=radio]:checked:before {
+    background: url("../images/radio_selected.png") no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.failure-info {
+    padding: 0.4rem 0.6667rem;
+}
+.failure-img,.success-img {
+    width: 1.3067rem;
+    height: 1.3067rem;
+    margin: auto;
+}
+.failure-img {
+    background: url("../images/failure-img.png") no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.success-img {
+    background: url("../images/success-img.png") no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.failure-text {
+    color: #329cff;
+    font-size: 0.4267rem;
+    text-align: center;
+    margin-top: 0.3333rem;
+}
+.success-money {
+    text-align: center;
+    font-size: 0.56rem;
+    color: #292929;
+    margin-top: 0.2667rem;
+}
+.reason-info {
+    padding: 0.48rem 0.2667rem ;
+    text-align: center;
+    font-size: 0.3733rem;
+    color: #4a4a4a;
+}
+.reason {
+    color: #ccc;
+}
+.btn-wrap {
+    padding: 0.2667rem 0.3333rem;;
+}
+.btn {
+    display: block;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    font-size: 0.3733rem;
+    color: #fff;
+    background: #0053a1;
+    -webkit-border-radius: 0.1333rem;
+    -moz-border-radius: 0.1333rem;
+    border-radius: 0.1333rem;
+}

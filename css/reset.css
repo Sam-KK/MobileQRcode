@@ -1,0 +1,111 @@
+﻿@charset "utf-8";
+/* CSS Document */
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, tr, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f0f0f0;
+    font-size: .4rem;
+    color: #333;
+    line-height: 1;
+    font-family: "Microsoft Yahei" !important;
+    /*
+    windows 7系统：微软雅黑 Arial；
+    windows XP及以下：新宋体，宋体，Arial
+    MAC默认字体：Helvetica Neue和Helvetica Hiragino Sans GB。
+    */
+}
+
+/* H5 */
+header, section, footer, aside, nav, main, article, figure {
+    display: block;
+}
+
+td, th, caption {
+    font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+input, textarea, select, button {
+    font: 14px Microsoft Yahei;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+em, i {
+    font-style: normal;
+}
+
+/* 清浮动 */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* 公用样式 */
+.oh {
+    overflow: hidden;
+}
+
+.bg_fff {
+    background: #fff;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.tc {
+    text-align: center;
+}
+
+.tl {
+    text-align: left;
+}
+
+.tr {
+    text-align: right;
+}

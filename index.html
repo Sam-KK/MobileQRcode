@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>二维码还款</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <script src="js/flexible.debug.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<!-- header start-->
+<header>
+    <!--<div class="back"></div>-->
+    <div class="header-title"></div>
+    <!--<div></div>-->
+</header>
+<!--header of end-->
+
+<!-- container start -->
+<div class="container">
+    <div class="title">
+        信用卡快捷还款
+    </div>
+
+    <!-- 卡列表 -->
+    <ul class="card">
+        <li class="card-item">
+            <div class="card-number">
+                622848 ******56893
+            </div>
+        </li>
+    </ul>
+
+    <div class="form">
+        <div class="item form-group">
+            <div class="label">手机号</div>
+            <div class="input-wrap">
+                <input type="number" class="form-control" id="phone" maxlength="20" placeholder="请输入联系人手机号码并验证（选填）" />
+            </div>
+            <div class="icon-clear">
+                <i class="clear-img iconfont"></i>
+            </div>
+        </div>
+        <div class="error-text"></div>
+        <div class="item form-group autoClear">
+            <div class="label">验证码</div>
+            <div class="input-wrap">
+                <input type="password" class="form-control" id="verification" maxlength="6" placeholder="请输入验证码" />
+            </div>
+            <div class="icon-clear">
+                <i class="clear-img iconfont"></i>
+            </div>
+            <div class="code-box">
+                <div class="code" onclick="settime(this)">获取验证码</div>
+            </div>
+        </div>
+        <div class="error-text"></div>
+    </div>
+
+    <div class="gray-text">
+        <div class="gray-layout">
+            <div class="icon-channel"></div>
+            还款渠道
+        </div>
+    </div>
+
+    <div class="list">
+        <li class="item item-radio">
+            <div class="ico">
+                <span class="icon-pufa"></span>
+            </div>
+            <div class="radio-ifo">
+                本行借记卡还款<i class="flag">推荐</i>
+            </div>
+            <div><input type="radio" name="group" value="本行借记卡还款" /></div>
+        </li>
+        <li class="item item-radio">
+            <div class="ico">
+                <span class="icon-zhifubao"></span>
+            </div>
+            <div class="radio-ifo">
+                支付宝钱包
+            </div>
+            <div><input type="radio" name="group" value="支付宝钱包" /></div>
+        </li>
+        <li class="item item-radio">
+            <div class="ico">
+                <span class="icon-weixin"></span>
+            </div>
+            <div class="radio-ifo">
+                微信支付
+            </div>
+            <div>
+                <input type="radio" name="group" value="微信支付" />
+            </div>
+        </li>
+        <li class="item item-radio">
+            <div class="ico">
+                <span class="icon-youzheng"></span>
+            </div>
+            <div class="radio-ifo">
+                中国邮政储蓄卡
+            </div>
+            <div><input type="radio" name="group" value="中国邮政储蓄卡" /></div>
+        </li>
+        <li class="item item-radio autoClear">
+            <div class="ico">
+                <span class="icon-Bank_China"></span>
+            </div>
+            <div class="radio-ifo">
+                中国银行储蓄卡
+            </div>
+            <div><input type="radio" name="group" value="中国银行储蓄卡" /></div>
+        </li>
+    </div>
+    <div class="btn-wrap">
+        <a href="next.html" class="btn next">
+            下一步
+        </a>
+    </div>
+</div>
+<!-- content of end -->
+</body>
+</html>

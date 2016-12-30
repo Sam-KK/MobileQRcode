@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>二维码还款失败</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <script src="js/flexible.debug.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<!-- header start-->
+<header>
+    <!--<div class="back"></div>-->
+    <div class="header-title"></div>
+    <!--<div></div>-->
+</header>
+<!--header of end-->
+
+<!-- container start -->
+<div class="container">
+    <div class="title">
+        信用卡快捷还款
+    </div>
+
+
+    <div class="failure-info">
+        <div class="failure-img"></div>
+        <p class="failure-text">还款失败!</p>
+    </div>
+
+
+    <div class="form">
+        <div class="reason-info">
+            <span class="reason">失败原因</span>
+            <span class="reason-text">网络异常，交易终止</span>
+        </div>
+    </div>
+
+    <div class="btn-wrap">
+        <a class="btn next">
+            重新扫码还款
+        </a>
+    </div>
+</div>
+<!-- content of end -->
+<script>
+    $(function(){
+        $("input").addClear();
+    });
+    //获取
+    (function($){
+        $.fn.extend({
+            addClear: function(options) {
+                if($(this).val().length >= 1) {
+                    $(this).parent().siblings(".icon-clear").css("visibility","visible");
+                }
+
+                $(this).keyup(function() {
+                    if($(this).val().length >= 1) {
+                        $(this).parent().siblings(".icon-clear").css("visibility","visible");
+                    } else {
+                        $(this).parent().siblings(".icon-clear").css("visibility","hidden");
+                    }
+                });
+
+                $(".icon-clear").click(function(){
+                    $(this).siblings(".input-wrap").find("input").val("");
+                    $(this).css("visibility","hidden");
+                });
+            }
+        });
+    })(jQuery);
+</script>
+</body>
+</html>
