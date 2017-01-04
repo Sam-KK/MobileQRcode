@@ -29,6 +29,9 @@
     <!-- 卡列表 -->
     <ul class="card">
         <li class="card-item">
+            <div class="card-logo">
+                <img src="images/logo.png" alt="">
+            </div>
             <div class="card-number">
                 622848 ******56893
             </div>
@@ -39,7 +42,7 @@
         <div class="item form-group">
             <div class="label">手机号</div>
             <div class="input-wrap">
-                <input type="number" class="form-control" id="phone" maxlength="20" placeholder="请输入联系人手机号码并验证（选填）" />
+                <input type="text" class="form-control" id="phone" maxlength="20" placeholder="请输入联系人手机号码并验证（选填）" />
             </div>
             <div class="icon-clear">
                 <i class="clear-img iconfont"></i>
@@ -55,7 +58,7 @@
                 <i class="clear-img iconfont"></i>
             </div>
             <div class="code-box">
-                <div class="code" onclick="settime(this)">获取验证码</div>
+                <button type="button" class="code" id="code" onclick="time(this)">获取验证码</button>
             </div>
         </div>
         <div class="error-text"></div>

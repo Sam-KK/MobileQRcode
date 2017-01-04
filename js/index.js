@@ -5,13 +5,6 @@
 $(function(){
     $("input").addClear();
 
-    var allInput = $(".form-group input");
-    $.each(allInput, function () {
-        $(this).focus(function () {
-            $(this).parents(".form-group").removeClass("error");
-            $(this).parents(".form-group").next(".error-text").hide();
-        });
-    });
     //验证手机号
     $("#phone").on("blur keyup",function(){
         var e = $(this).val();
@@ -104,7 +97,6 @@ $(function(){
     });
 });
 
-
 //clear  input输入值
 (function($){
     $.fn.extend({
@@ -120,9 +112,6 @@ $(function(){
                     $(this).parent().siblings(".icon-clear").css("visibility","hidden");
                 }
             });
-            // $(this).blur(function () {
-            //     $(this).parent().siblings(".icon-clear").css("visibility","hidden");
-            // });
 
             $(".icon-clear").click(function(){
                 $(this).siblings(".input-wrap").find("input").val("");
@@ -132,25 +121,63 @@ $(function(){
     });
 })(jQuery);
 
-
 //60秒倒计时
-var countdown=60;
-function settime(obj) {
+var countdown = 60;
+function settime() {
     if (countdown == 0) {
-        obj.removeAttribute("disabled");
-        obj.innerHTML="获取验证码";
-        obj.style.background = "#0053a0";
-        obj.style.color = "#fff";
+        $("#code").attr("disabled", false);
+        $("#code").html("获取验证码");
         countdown = 60;
+        $("#code").css({
+            color: "#fff",
+            background: "#0053a0"
+        });
         return;
     } else {
-        obj.setAttribute("disabled", true);
-        obj.innerHTML="重新获取(" + countdown + "秒)";
-        obj.style.background = "#c1c1c1";
-        obj.style.color = "#fff";
+        $("#code").attr("disabled", true);
+        $("#code").html("重新发送(" + countdown + "s)");
         countdown--;
+        $("#code").css({
+            color: "#fff",
+            background: "#c1c1c1"
+        });
     }
     setTimeout(function() {
-            settime(obj) }
-        ,1000)
+        settime();
+    }, 1000);
+}
+
+//验证手机号
+function checkPhone() {
+    var e = $("#phone").val();
+    var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/g;
+    if (e == "" || e == null) {
+        $("#phone").parents('.form-group').addClass("error");
+        $("#phone").parents('.form-group').next(".error-text").html("输入不能为空!").show();
+    } else if (!reg.test(e)) {
+        $("#phone").parents('.form-group').addClass("error");
+        $("#phone").parents('.form-group').next(".error-text").html("手机号格式不正确!").show();
+    } else {
+        $("#phone").parents('.form-group').removeClass("error");
+        $("#phone").parents('.form-group').next(".error-text").html("!").hide();
+        settime();
+    }
+}
+
+function time(btn) {
+    if (checkPhone()) {
+        var e = $("#verification").val();
+        var reg = /^[0-9]{6}$/;
+        if (e == "" || e == null) {
+            $("#verification").parents('.form-group').addClass("error");
+            $("#verification").parents('.form-group').next(".error-text").html("验证码不能为空!").show();
+        } else if (!reg.test(e)) {
+            $("#verification").parents('.form-group').addClass("error");
+            $("#verification").parents('.form-group').next(".error-text").html("请输入6位数字验证码!").show();
+        } else {
+            $("#verification").parents('.form-group').removeClass("error");
+            $("#verification").parents('.form-group').next(".error-text").html("!").hide();
+        }
+        settime();
+    }
 }
