@@ -23,7 +23,7 @@
 <!-- container start -->
 <div class="container">
     <div class="title">
-        信用卡快捷还款
+        浦发信用卡快捷还款
     </div>
 
     <!-- 卡列表 -->
@@ -40,9 +40,9 @@
 
     <div class="form">
         <div class="item form-group">
-            <div class="label">手机号</div>
+            <div class="label">联系人手机号</div>
             <div class="input-wrap">
-                <input type="text" class="form-control" id="phone" maxlength="20" placeholder="请输入联系人手机号码并验证（选填）" />
+                <input type="text" class="form-control" id="phone" maxlength="20" placeholder="输入联系人手机号（选填）" />
             </div>
             <div class="icon-clear">
                 <i class="clear-img iconfont"></i>
@@ -51,7 +51,7 @@
         <div class="error-text"></div>
         <div class="item form-group autoClear">
             <div class="label">验证码</div>
-            <div class="input-wrap">
+            <div class="input-wrap" style="width:3.3rem">
                 <input type="password" class="form-control" id="verification" maxlength="6" placeholder="请输入验证码" />
             </div>
             <div class="icon-clear">
@@ -72,7 +72,7 @@
     </div>
 
     <div class="list">
-        <li class="item item-radio">
+        <label class="item item-radio">
             <div class="ico">
                 <span class="icon-pufa"></span>
             </div>
@@ -80,8 +80,8 @@
                 本行借记卡还款<i class="flag">推荐</i>
             </div>
             <div><input type="radio" name="group" value="本行借记卡还款" /></div>
-        </li>
-        <li class="item item-radio">
+        </label>
+        <label class="item item-radio">
             <div class="ico">
                 <span class="icon-zhifubao"></span>
             </div>
@@ -89,8 +89,8 @@
                 支付宝钱包
             </div>
             <div><input type="radio" name="group" value="支付宝钱包" /></div>
-        </li>
-        <li class="item item-radio">
+        </label>
+        <label class="item item-radio">
             <div class="ico">
                 <span class="icon-weixin"></span>
             </div>
@@ -100,8 +100,8 @@
             <div>
                 <input type="radio" name="group" value="微信支付" />
             </div>
-        </li>
-        <li class="item item-radio">
+        </label>
+        <label class="item item-radio">
             <div class="ico">
                 <span class="icon-youzheng"></span>
             </div>
@@ -109,8 +109,8 @@
                 中国邮政储蓄卡
             </div>
             <div><input type="radio" name="group" value="中国邮政储蓄卡" /></div>
-        </li>
-        <li class="item item-radio autoClear">
+        </label>
+        <label class="item item-radio autoClear">
             <div class="ico">
                 <span class="icon-Bank_China"></span>
             </div>
@@ -118,14 +118,19 @@
                 中国银行储蓄卡
             </div>
             <div><input type="radio" name="group" value="中国银行储蓄卡" /></div>
-        </li>
+        </label>
     </div>
     <div class="btn-wrap">
-        <a href="next.html" class="btn next">
+        <a href="javascript:void(0)" class="btn next" onclick="nextH()">
             下一步
         </a>
     </div>
 </div>
 <!-- content of end -->
 </body>
+<script type="text/javascript">
+    function nextH (argument) {
+        window.open("next.html","_self");
+    }
+</script>
 </html>
